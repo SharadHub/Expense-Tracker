@@ -79,11 +79,129 @@
         <div class="chart-section">
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title">Overview</div>
+                    <h3 class="card-title">Overview</h3>
+                    <div style="display: flex; gap: 1rem;">
+                        <div class="dropdown">Yearly <i class="fas fa-chevron-down"></i></div>
+                        <button class="filter-btn">
+                            <i class="fas fa-filter"></i>
+                            Filter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <div class="chart-bar" style="height: 120px;"></div>
+                    <div class="chart-bar" style="height: 80px;"></div>
+                    <div class="chart-bar active" style="height: 200px; ">
+                        <div style="position: absolute;
+                                    top: -30px;
+                                    left: -20%;
+                                    transform: translateX(-50);
+                                    background: white;
+                                    padding: 0.2rem 0.1rem;
+                                    border-radius: 4px;
+                                    box-shadow: 0 2px 8px rgba(0,0,0,1);
+                                    font-size: 0.75rem;">
+                            <div style="font-weight: 600;">January 2025</div>
+                            <div style="color: #10b981;">Income: $15000.00</div>
+                            <div style="color: #ea580c;">Expense: $8575.00</div>
+                        </div>
+                        <div class="chart-bar-income" style="height: 120px;"></div>
+                        <div class="chart-bar-expense" style="height: 80px;"></div>
+                    </div>
+
+                    <div class="chart-bar" style="height: 150px;"></div>
+                    <div class="chart-bar" style="height: 90px;"></div>
+                    <div class="chart-bar" style="height: 110px;"></div>
+                    <div class="chart-bar" style="height: 130px;"></div>
+                    <div class="chart-bar" style="height: 100px;"></div>
+                    <div class="chart-bar" style="height: 80px;"></div>
+                    <div class="chart-bar" style="height: 95px;"></div>
+                </div>
+                <div class="chart-levels">
+                    <span>January</span>
+                    <span>February</span>
+                    <span>March</span>
+                    <span>April</span>
+                    <span>May</span>
+                    <span>June</span>
+                    <span>July</span>
+                    <span>August</span>
+                    <span>September</span>
+                    <span>October</span>
+                    <span>November</span>
+                    <span>December</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">All expenses</h3>
+                    <button class="card-menu"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <div style="font-size: 0.75rem; color: #6b7280; margin-bottom: 1rem;">Spending Breakdown by Category
+                </div>
+                <div class="expenses-breakdown">
+                    <div class="total-expenses">$30,455.00</div>
+                    <div class="period-tabs">
+                        <span-period-tab>Daily</span-period-tab>
+                        <span-period-tab>Weekly</span-period-tab>
+                        <span-period-tab active>Monthly</span-period-tab>
+                    </div>
+                    <div class="period-amounts">
+                        <span>Daily</span>
+                        <span>Weekly</span>
+                        <span>Monthly</span>
+                    </div>
+
+                    <div class="period-values">
+                        <span>$150.00</span>
+                        <span>$2750.00</span>
+                        <span>$5000.00</span>
+                    </div>
+                    <div class="color-bar"></div>
+
+                    <div class="expense-categories">
+                        <ul class="expenses-categories">
+                            <li class="expense-categories">
+                                <div class="category-info">
+                                    <div class="category-dot-dot-food"></div>
+                                    <span>Food & Health</span>
+                                </div>
+                                <span>$489</span>
+                            </li>
+
+                            <li class="expense-categories">
+                                <div class="category-info">
+                                    <div class="category-dot-dot-food"></div>
+                                    <span>Food & Health</span>
+                                </div>
+                                <span>$489</span>
+                            </li>
+
+                            <li class="expense-categories">
+                                <div class="category-info">
+                                    <div class="category-dot-dot-food"></div>
+                                    <span>Food & Health</span>
+                                </div>
+                                <span>$489</span>
+                            </li>
+
+                            <li class="expense-categories">
+                                <div class="category-info">
+                                    <div class="category-dot-dot-food"></div>
+                                    <span>Food & Health</span>
+                                </div>
+                                <span>$489</span>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

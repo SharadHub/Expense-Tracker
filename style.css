@@ -209,3 +209,56 @@ body{
     border-radius: 3px;
     
 }
+
+.chart-section{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2rem;
+}
+
+.chart-container{
+    height:300px;
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.chart-bar{
+    width: 40px;
+    background: #e5e7eb;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.chart-bar.active{
+    background: linear-gradient(to top, #ea580c, #f59236);
+
+}
+
+.chat-bar-income{
+    background: #10b980;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+.chart-bar-expense{
+    background: #ea580c;
+    border-radius: 4px;
+}
+
+.chart-labels{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1px;
+    font-size: 0.75px;
+    color: #6b7280
+}
