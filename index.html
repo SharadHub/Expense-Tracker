@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Good Morning, Sharad</h1>
+        <div class="header-controls">
+            <div class="dropdown">
+                Daily <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="date-picker">
+                <i class="fas fa-calendar"></i>
+                26 Dec, 2025
+            </div>
+            <div class="export-btn">
+                <i class="fas fa-download"> </i>
+                Export
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="dashboard-grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Monthly Income</h3>
+                    <button class="card-menu"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <div class="amount income-amount">$2,600.00</div>
+                <div class="change">
+                    <i class="fas fa-arrow-up"></i>
+                    12% vs Last Month
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Monthly Expenses</h3>
+                    <button class="card-menu"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <div class="amount income-amount">$2800.00</div>
+                <div class="change">
+                    <i class="fas fa-arrow-down"></i>
+                    12% vs Last Month
+                </div>
+            </div>
+            <div class="card my-card">
+                <div class="card-header">
+                    <h3 class="card-title">My Card</h3>
+                    <button class="card-menu" style="color: white   "><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+                <div style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 1rem;">Linked with your primary wallet
+                </div>
+                <div class="card-chip"></div>
+                <div class="card-number">4356 0011 2322 9877</div>
+                <div class="card-holder">Sharad Bista</div>
+                <div class="card-logo">
+                    <div class="card-logo-circle logo-red"></div>
+                    <div class="card-logo-circle logo-orange"></div>
+                </div>
+
+                <div class="spending-section">
+                    <div style="margin-bottom: 0.5rem; font-size: 0.875rem; opacity: 0.9; ">Spending Limit</div>
+                    <div class="spending-limit">$3600.00</div>
+                    <div class="spending-used">used from $15,000.00</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Overview</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
