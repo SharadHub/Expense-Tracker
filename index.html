@@ -144,9 +144,9 @@
                 <div class="expenses-breakdown">
                     <div class="total-expenses">$30,455.00</div>
                     <div class="period-tabs">
-                        <span-period-tab>Daily</span-period-tab>
-                        <span-period-tab>Weekly</span-period-tab>
-                        <span-period-tab active>Monthly</span-period-tab>
+                        <span class="period-tab">Daily</span>
+                        <span class="period-tab">Weekly</span>
+                        <span class="period-tab active">Monthly</span>
                     </div>
                     <div class="period-amounts">
                         <span>Daily</span>
@@ -162,42 +162,196 @@
                     <div class="color-bar"></div>
 
                     <div class="expense-categories">
-                        <ul class="expenses-categories">
-                            <li class="expense-categories">
+                        <ul class="expense-categories">
+                            <li class="expense-category">
                                 <div class="category-info">
-                                    <div class="category-dot-dot-food"></div>
+                                    <div class="category-dot dot-food"></div>
                                     <span>Food & Health</span>
                                 </div>
                                 <span>$489</span>
                             </li>
 
-                            <li class="expense-categories">
+                            <li class="expense-category">
                                 <div class="category-info">
-                                    <div class="category-dot-dot-food"></div>
-                                    <span>Food & Health</span>
+                                    <div class="category-dot dot-entertainment"></div>
+                                    <span>Entertainment</span>
                                 </div>
-                                <span>$489</span>
+                                <span>$123</span>
                             </li>
 
-                            <li class="expense-categories">
+                            <li class="expense-category">
                                 <div class="category-info">
-                                    <div class="category-dot-dot-food"></div>
-                                    <span>Food & Health</span>
+                                    <div class="category-dot dot-shopping"></div>
+                                    <span>Shopping</span>
                                 </div>
-                                <span>$489</span>
+                                <span>$267</span>
                             </li>
 
-                            <li class="expense-categories">
+                            <li class="expense-category">
                                 <div class="category-info">
-                                    <div class="category-dot-dot-food"></div>
-                                    <span>Food & Health</span>
+                                    <div class="category-dot dot-investment"></div>
+                                    <span>Investment</span>
                                 </div>
-                                <span>$489</span>
+                                <span>$900</span>
                             </li>
                         </ul>
-
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="card transacrions-section">
+            <div class="card-header">
+                <h3 class="card-title">Recent Trasactions</h3>
+                <div class="filters">
+                    <button class="filter-btn">
+                        <i class="fas fa-sort"></i>
+                        Sort
+                    </button>
+                    <button class="filter-btn">
+                        <i class="fas fa-filter"></i>
+                        Filter
+                    </button>
+                </div>
+            </div>
+
+            <table class="transactions-table">
+                <thead>
+                    <tr>
+                        <th>Date <i class="fas fa-sort"></i></th>
+                        <th>Category <i class="fas fa-sort"></i></th>
+                        <th>Amount <i class="fas fa-sort"></i></th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>14 September, 2025</td>
+                        <td>Subscription</td>
+                        <td>$345.00</td>
+                        <td><span class="status-success">Success</span></td>
+                        <td><button class="action-btn"><i class="fas fa-ellipsis-h"></i></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>10 October, 2025</td>
+                        <td>Subscription</td>
+                        <td>$345.00</td>
+                        <td><span class="status-success">Success</span></td>
+                        <td><button class="action-btn"><i class="fas fa-ellipsis-h"></i></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>19 December, 2025</td>
+                        <td>Subscription</td>
+                        <td>$345.00</td>
+                        <td><span class="status-success">Success</span></td>
+                        <td><button class="action-btn"><i class="fas fa-ellipsis-h"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--Income and Expense button-->
+
+    <div class="add-buttons">
+        <button class="fab fab-income" onclick="openIncomeModal()" title="Add Income">
+            <i class="fas fa-plus"></i>
+        </button>
+
+        <button class="fab fab-expense" onclick="openExpenseModal()" title="Add Expense">
+            <i class="fas fa-minus"></i>
+        </button>
+    </div>
+
+    <!-- Income Modal -->
+    <div id="incomeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Add Income</h2>
+                <button class="close-btn" onclick="closeModal('incomeModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="incomeForm" autocomplete="off">
+                    <div class="form-group">
+                        <label class="form-label">Amount</label>
+                        <input type="number" class="form-input" id="incomeAmount" placeholder="Enter Amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Category</label>
+                        <select class="form-select" id="incomeCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="salary">Salary</option>
+                            <option value="freelance">Freelance</option>
+                            <option value="business">Business</option>
+                            <option value="investment">Investment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <input type="text" class="form-input" id="incomeDescription" placeholder="Enter Description" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Date</label>
+                        <input type="date" class="form-input" id="incomeDate" required>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onClick="closeModal('incomeModal')">Cancel</button>
+                <button class="btn btn-primary" onClick="addIncome()">Add Income</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expense Modal -->
+
+    <div id="expenseModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Add Income</h2>
+                <button class="close-btn" onclick="closeModal('expenseModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="expenseForm" autocomplete="off">
+                    <div class="form-group">
+                        <label class="form-label">Amount</label>
+                        <input type="number" class="form-input" id="expenseAmount" placeholder="Enter Amount" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Category</label>
+                        <select class="form-select" id="expenseCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="food">Food & Health</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="shopping">Shopping</option>
+                            <option value=" ">Transport</option>
+                            <option value="utilities">Utilities</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <input type="text" class="form-input" id="expenseDescription" placeholder="Enter Description" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Date</label>
+                        <input type="date" class="form-input" id="expenseDate" required>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onClick="closeModal('expenseModal')">Cancel</button>
+                <button class="btn btn-primary" onClick="addExpense()">Add Expense</button>
             </div>
         </div>
     </div>
