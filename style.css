@@ -84,6 +84,13 @@ body{
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: translate(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
 }
 
@@ -450,5 +457,153 @@ body{
 }
 
 .modal{
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content{
+    background: white;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 90vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: slideIn 0.3s ease;
+}
+
+.modal-header{
+    padding: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title{
+    dominant-baseline: 1.25rem;
+    font-weight: 600;
+}
+
+.close-btn{
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #6b7280;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.modal-body{
+    padding: 1.5rem;
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+.form-label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-input{
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-select{
+    width: 100%;
+    padding: 0.75rem;
+    border: #d1d5db;
+    border: 8px;
+    font-size: 1rem;
+    background: white;
+}
+
+.modal-footer{
+    padding: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+}
+
+.btn{
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-secondary{
+    background: #374151;
+    color: white;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn{
+    from{
+        transform: translate(-50%, -60%);
+        opacity: 0;
+    }
+    to{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+
+/* responsive for monitors */
+
+@media (max-width: 1200px) {
+    .dashboard-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .chart-section{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+/* responsive for tablets */
+
+@media (max-width: 768px) {
+    .dashboard-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .main-content{
+        padding: 1rem;
+    }
     
 }
